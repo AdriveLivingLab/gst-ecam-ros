@@ -1,0 +1,19 @@
+<!-- -*- mode: XML -*- -->
+
+<launch>
+<!-- This launch file launches all six available cameras. -->
+
+  <!-- Front right -->
+  <include file="$(find gst_ecam)/launch/single.launch" >
+    <arg name="DEVICE" value="2"/>
+    <arg name="CAM_NAME" value="camera_front_right"/>
+  </include>
+
+
+  <!-- Front left -->
+  <include file="$(find gst_ecam)/launch/single.launch" >
+    <arg name="DEVICE" value="4"/>
+    <arg name="CAM_NAME" value="camera_front_left"/>
+  </include>
+
+</launch>

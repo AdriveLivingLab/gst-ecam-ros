@@ -1,0 +1,12 @@
+<launch>
+  <!-- This launchfile brings up a node that starts gstream recording -->
+  <arg name="CAM_NAME" default="cam_front_left"/>
+  <arg name="DEVICE" default="2"/>
+  <arg name="PATH" default="/storage/bag/"/>
+
+  <node name="$(arg CAM_NAME)" pkg="gst_ecam" type="gst_ecam_node" output="screen">
+    <param name="camera_device" type="string" value="$(arg DEVICE)"/>
+    <param name="record_path" type="string" value="$(arg PATH)"/>
+  </node>
+
+</launch>
